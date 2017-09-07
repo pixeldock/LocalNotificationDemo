@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		805A48261F6135FB00E977F3 /* UserNotificationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805A48251F6135FB00E977F3 /* UserNotificationUITests.swift */; };
 		80F81F121F5DED7100BC6392 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F81F111F5DED7100BC6392 /* AppDelegate.swift */; };
 		80F81F141F5DED7100BC6392 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F81F131F5DED7100BC6392 /* ViewController.swift */; };
 		80F81F171F5DED7100BC6392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F81F151F5DED7100BC6392 /* Main.storyboard */; };
@@ -14,7 +15,20 @@
 		80F81F1C1F5DED7100BC6392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80F81F1A1F5DED7100BC6392 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		805A48281F6135FB00E977F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80F81F061F5DED7100BC6392 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80F81F0D1F5DED7100BC6392;
+			remoteInfo = UserNotification;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		805A48231F6135FB00E977F3 /* UserNotificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserNotificationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		805A48251F6135FB00E977F3 /* UserNotificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationUITests.swift; sourceTree = "<group>"; };
+		805A48271F6135FB00E977F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80F81F0E1F5DED7100BC6392 /* UserNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80F81F111F5DED7100BC6392 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80F81F131F5DED7100BC6392 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +39,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		805A48201F6135FB00E977F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80F81F0B1F5DED7100BC6392 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +56,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		805A48241F6135FB00E977F3 /* UserNotificationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				805A48251F6135FB00E977F3 /* UserNotificationUITests.swift */,
+				805A48271F6135FB00E977F3 /* Info.plist */,
+			);
+			path = UserNotificationUITests;
+			sourceTree = "<group>";
+		};
 		80F81F051F5DED7100BC6392 = {
 			isa = PBXGroup;
 			children = (
 				80F81F101F5DED7100BC6392 /* UserNotification */,
+				805A48241F6135FB00E977F3 /* UserNotificationUITests */,
 				80F81F0F1F5DED7100BC6392 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				80F81F0E1F5DED7100BC6392 /* UserNotification.app */,
+				805A48231F6135FB00E977F3 /* UserNotificationUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +99,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		805A48221F6135FB00E977F3 /* UserNotificationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 805A482C1F6135FB00E977F3 /* Build configuration list for PBXNativeTarget "UserNotificationUITests" */;
+			buildPhases = (
+				805A481F1F6135FB00E977F3 /* Sources */,
+				805A48201F6135FB00E977F3 /* Frameworks */,
+				805A48211F6135FB00E977F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				805A48291F6135FB00E977F3 /* PBXTargetDependency */,
+			);
+			name = UserNotificationUITests;
+			productName = UserNotificationUITests;
+			productReference = 805A48231F6135FB00E977F3 /* UserNotificationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		80F81F0D1F5DED7100BC6392 /* UserNotification */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80F81F201F5DED7100BC6392 /* Build configuration list for PBXNativeTarget "UserNotification" */;
@@ -94,6 +144,11 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = pixeldock;
 				TargetAttributes = {
+					805A48221F6135FB00E977F3 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 80F81F0D1F5DED7100BC6392;
+					};
 					80F81F0D1F5DED7100BC6392 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -114,11 +169,19 @@
 			projectRoot = "";
 			targets = (
 				80F81F0D1F5DED7100BC6392 /* UserNotification */,
+				805A48221F6135FB00E977F3 /* UserNotificationUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		805A48211F6135FB00E977F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80F81F0C1F5DED7100BC6392 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +195,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		805A481F1F6135FB00E977F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				805A48261F6135FB00E977F3 /* UserNotificationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		80F81F0A1F5DED7100BC6392 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,6 +213,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		805A48291F6135FB00E977F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80F81F0D1F5DED7100BC6392 /* UserNotification */;
+			targetProxy = 805A48281F6135FB00E977F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		80F81F151F5DED7100BC6392 /* Main.storyboard */ = {
@@ -163,6 +242,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		805A482A1F6135FB00E977F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NPY72H3Q84;
+				INFOPLIST_FILE = UserNotificationUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixeldock.UserNotificationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UserNotification;
+			};
+			name = Debug;
+		};
+		805A482B1F6135FB00E977F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NPY72H3Q84;
+				INFOPLIST_FILE = UserNotificationUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pixeldock.UserNotificationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UserNotification;
+			};
+			name = Release;
+		};
 		80F81F1E1F5DED7100BC6392 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -305,6 +416,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		805A482C1F6135FB00E977F3 /* Build configuration list for PBXNativeTarget "UserNotificationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				805A482A1F6135FB00E977F3 /* Debug */,
+				805A482B1F6135FB00E977F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		80F81F091F5DED7100BC6392 /* Build configuration list for PBXProject "UserNotification" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

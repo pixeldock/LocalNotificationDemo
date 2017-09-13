@@ -12,10 +12,6 @@ class UserNotificationUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
     }
     
@@ -28,8 +24,31 @@ class UserNotificationUITests: XCTestCase {
         // close app to trigger local notification
         XCUIDevice.shared.press(XCUIDevice.Button.home)
 
+        // wait for the notification
         let localNotification = springboard.otherElements["USERNOTIFICATION, now, Buy milk!, Remember to buy milk from store!"]
         XCTAssertEqual(waiterResultWithExpectation(localNotification), XCTWaiter.Result.completed)
+    }
+    
+    func testSwitchOffWiFi() {
+        let app = XCUIApplication()
+        let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+        
+        app.launch()
+        
+        // open control center
+        let coord1 = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.99))
+        let coord2 = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
+        coord1.press(forDuration: 0.1, thenDragTo: coord2)
+        
+        let wifiButton = springboard.switches["wifi-button"]
+        wifiButton.tap()
+        
+        // close control center
+        let coord3 = app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.1))
+        coord3.tap()
+        
+
+        
     }
 }
 
@@ -40,5 +59,13 @@ extension UserNotificationUITests {
                                                       object: element)
         let result = XCTWaiter().wait(for: [myExpectation], timeout: 6)
         return result
+    }
+}
+
+extension XCUIApplication {
+    func openNotificationCenter() {
+        let coord1 = coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.99))
+        let coord2 = coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.5))
+        coord1.press(forDuration: 0.1, thenDragTo: coord2)
     }
 }
